@@ -29,6 +29,10 @@ export function getProviderByUrl(url) {
     return providers.vimeo;
   }
 
+  if (/^https?:\/\/twitch.tv(:[0-9]+)?\/.*$/.test(url)) {
+    return providers.twitch;
+  }
+
   return null;
 }
 
