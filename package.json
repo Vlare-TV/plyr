@@ -36,7 +36,8 @@
     "remark": "remark -f --use 'validate-links=repository:\"sampotts/plyr\"' '{,!(node_modules),.?**/}*.md'",
     "deploy": "yarn lint && gulp version && gulp build && gulp deploy",
     "format": "prettier --write \"./{src,demo/src}/**/*.{js,scss}\"",
-    "start": "gulp"
+    "start": "gulp",
+    "postinstall": "yarn build"
   },
   "devDependencies": {
     "@sampotts/eslint-config": "1.1.7",
