@@ -96,7 +96,6 @@ const twitch = {
       player.media.duration = 0;
       const durationInterval = setInterval(() => {
         const duration = instance.getDuration();
-        console.log(duration);
         if (duration !== 0 && is.number(duration)) {
           if (instance.plyrProps.type !== 'channel' && duration === Infinity) {
             // Only channels are allowed to have an infinite duration
