@@ -21,6 +21,7 @@ const twitch = {
     // Setup API
     if (is.object(window.Twitch) && is.function(window.Twitch.Player)) {
       twitch.ready.call(this);
+      window.TWITCH.Player.controls = false;
     } else {
       // Load the API
       loadScript(this.config.urls.twitch.api).catch((error) => {
