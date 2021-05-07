@@ -52,6 +52,7 @@ const twitch = {
     const opts = {
       autoplay: player.config.autoplay,
       muted: false,
+      volume: 1,
     };
 
     // Parse whether video, channel or collection
@@ -65,7 +66,7 @@ const twitch = {
     const container = createElement('div', { id, poster, class: player.config.classNames.embedContainer });
     player.media = replaceElement(container, player.media);
 
-    player.embed = new window.Twitch.Player(id, opts);
+    player.embed = new window.Twitch.Embed(id, opts);
 
     // Get the instance
     const instance = player.embed;
