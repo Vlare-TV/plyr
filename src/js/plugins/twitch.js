@@ -51,7 +51,7 @@ const twitch = {
 
     const opts = {
       autoplay: player.config.autoplay,
-      muted: player.config.muted,
+      muted: false,
     };
 
     // Parse whether video, channel or collection
